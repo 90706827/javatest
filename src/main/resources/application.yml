@@ -1,16 +1,17 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT
     username: root
     password: root
-    maxActive: 20
-    maxIdle: 10
-    defaultAutoCommit: true
-    timeBetweenEvictionRunsMillis: 900000
-    minEvictableIdleTimeMillis: 1800000
-    testOnBorrow: true
-    validationQuery: select 1
-    maxWait: 3000
-    validationQueryTimeout: 2
-    validationInterval: 30000
-    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 30
+      auto-commit: true
+      idle-timeout: 60000
+      pool-name: HikariPC
+      max-lifetime: 1800000
+      connection-timeout: 3000
+server:
+  port: 8081
