@@ -1,17 +1,17 @@
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.1.217:3306/test?useSSL=false&useUnicode=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=GMT&autoReconnect=true
-    username: root
-    password: root
-    type: com.zaxxer.hikari.HikariDataSource
-    hikari:
-      minimum-idle: 2
-      maximum-pool-size: 5
-      auto-commit: true
-      idle-timeout: 60000
-      pool-name: HikariPC
-      max-lifetime: 1800000
-      connection-timeout: 30000
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.1.217:3306/test?useSSL=false&useUnicode=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=GMT&autoReconnect=true
+#    username: root
+#    password: root
+#    type: com.zaxxer.hikari.HikariDataSource
+#    hikari:
+#      minimum-idle: 2
+#      maximum-pool-size: 5
+#      auto-commit: true
+#      idle-timeout: 60000
+#      pool-name: HikariPC
+#      max-lifetime: 1800000
+#      connection-timeout: 30000
 server:
   port: 8081
